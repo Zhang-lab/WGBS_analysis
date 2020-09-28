@@ -43,3 +43,11 @@ That's it!
 `-a`: ADAPT1 for cutadapt  
 `-b`: ADAPT2 for cutadapt  
 
+# Output files
+
+After running the pipeline, there will be a folder called Processed_${name}, all intermediate files and final output files are stored there. The major outputs produced by the pipeline are:
+   1)	JSON file with quality control measurement of user supplied dataset. 
+   2)	Log file with processing status of each step .
+   3)	Processed files after alignment (.bam) and bismark output files. 
+   4)	BedGraph file for visualization purpose
+
