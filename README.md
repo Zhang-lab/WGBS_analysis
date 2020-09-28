@@ -24,9 +24,16 @@ wget http://regmedsrv1.wustl.edu/Public_SPACE/bmiao/Public_html/TaRGET_II_pipeli
 Step2. process data by the singularity image: 
 #### Please run at same directory with your data OR the soft link of your data    
 ```bash
-singularity run -B /scratch:/scratch -B ./:/process <path-to-image> -r <PE> -o <read_file1> -p <read_file2> 
+singularity run -B ./:/process <path-to-image> -r <PE> -o <read_file1> -p <read_file2> 
 ```
-
+**soft link introduction:** For soft link of data, need to add one bind option for singularity, which is ```-B <full-path-of-original-position>:<full-path-of-original-position>```. 
+For example:
+soft link the data from /scratch to run on folder /home/example. **Please make sure you use the absolute path.**
+```
+ln -s /scrach/mydata.fastq.gz /home/example;
+cd /home/example
+singularity run -B ./:/process -B /scratch:/scratch /home/image/mm10_TaRGET_WGBS_20191126.simg -r PE -o read1.fastq.gz -p read2.fastq.gz
+```
 That's it!
 
 #parameters:  
