@@ -17,7 +17,7 @@ Step1. download singularity container (you only need download the containcer for
 ####  
 ```bash
 # download image from local server:  
-wget -O wgbs.simg <link_to_be_added> 
+wget http://regmedsrv1.wustl.edu/Public_SPACE/bmiao/Public_html/TaRGET_II_pipeline/WGBS/mm10_TaRGET_WGBS_20191126.simg
 ```
 
 Step2. process data by the singularity image: 
