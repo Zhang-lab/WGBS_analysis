@@ -11,6 +11,7 @@ For any question, please contact Wustl.Zhanglab@gmail.com
 
 ## Usage: 
 2-step guideline for pipeline usage:
+
 Please note that this is for **mm10 PE WGBS data only** for now.  
 
 Step1. download singularity container (you only need download the containcer for once, then you can use them directly):  
